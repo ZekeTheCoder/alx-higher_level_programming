@@ -12,3 +12,8 @@
 9. File: 8-concat_edges.py - Complete this source code to print object-oriented programming with Python
 10. File: 9-easter_egg.py - Write a Python script that prints “The Zen of Python”, by TimPeter
 11. Files: 10-check_cycle.c, lists.h - Write a function in C that checks if a singly linked list has a cycle in it.
+
+### Advanced (3)
+1. File: 100-write.py - Write a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19
+2. File: 101-compile - Write a script that compiles a Python script file.
+3. File: 102-magic_calculation.py - Write the Python function def magic_calculation(a, b)
