@@ -9,3 +9,7 @@
 6. File: 5-variable_load.py -  imports the variable a from the file variable_load_5.py and prints its value.
 
 ### Advanced (4)
+1. File: 100-my_calculator.py - imports all functions from the file calculator_1.py and handles basic operations.
+2. File: 101-easy_print.py - prints #pythoniscool, followed by a new line, in the standard output.
+3. File: 102-magic_calculation.py -  function def magic_calculation(a, b)
+4. File: 103-fast_alphabet.py - prints the alphabet in uppercase.
