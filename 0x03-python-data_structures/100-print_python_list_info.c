@@ -6,7 +6,7 @@
  * print_python_list_info - prints some basic info about
  * Python lists.
  *
- * @p:PyObject
+ * @p: PyObject
  * Return: no return
  */
 void print_python_list_info(PyObject *p)
@@ -23,6 +23,7 @@ void print_python_list_info(PyObject *p)
 
 	for (i = 0; i < size; i++)
 	{
-		printf("Element %i: %s\n", i, Py_TYPE(list->list_item[i])->tp_name);
+		item = list->ob_item[i];
+		printf("Element %i: %s\n", i, Py_TYPE(item)->tp_name);
 	}
 }
