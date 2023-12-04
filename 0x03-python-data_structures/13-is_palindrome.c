@@ -1,49 +1,6 @@
 #include "lists.h"
 
 /**
- * reverse_list - reverses a linked list in place
- *
- * @head: pointer to the head of the linked list
- */
-void reverse_list(listint_t **head)
-{
-	listint_t *prev = NULL, *current = *head, *next = NULL;
-
-	while (current)
-	{
-		next = current->next;
-		current->next = prev;
-		prev = current;
-		current = next;
-	}
-
-	*head = prev;
-}
-
-/**
- * compare_lists - compares two linked lists
- *
- * @list1: first linked list
- * @list2: second linked list
- *
- * Return: 1 if the lists are equal, 0 otherwise
- */
-int compare_lists(listint_t *list1, listint_t *list2)
-{
-	while (list1 && list2)
-	{
-		if (list1->n != list2->n)
-		{
-			return (0);
-		}
-		list1 = list1->next;
-		list2 = list2->next;
-	}
-
-	return (1);
-}
-
-/**
  * is_palindrome - checks if a singly linked list is a palindrome.
  * An empty list is considered a palindrome.
  *
@@ -94,4 +51,47 @@ int is_palindrome(listint_t **head)
 	}
 
 	return (is_palindrome);
+}
+
+/**
+ * reverse_list - reverses a linked list in place
+ *
+ * @head: pointer to the head of the linked list
+ */
+void reverse_list(listint_t **head)
+{
+	listint_t *prev = NULL, *current = *head, *next = NULL;
+
+	while (current)
+	{
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
+	}
+
+	*head = prev;
+}
+
+/**
+ * compare_lists - compares two linked lists
+ *
+ * @list1: first linked list
+ * @list2: second linked list
+ *
+ * Return: 1 if the lists are equal, 0 otherwise
+ */
+int compare_lists(listint_t *list1, listint_t *list2)
+{
+	while (list1 && list2)
+	{
+		if (list1->n != list2->n)
+		{
+			return (0);
+		}
+		list1 = list1->next;
+		list2 = list2->next;
+	}
+
+	return (1);
 }
