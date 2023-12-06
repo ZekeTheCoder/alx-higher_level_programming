@@ -16,7 +16,7 @@
 13. File: 12-roman_to_int.py - function def roman_to_int(roman_string): that converts a Roman numeral to an integer.
 
 ### Advanced (4)
-1. 
-2. 
-3. 
-4. 
+1. File: 100-weight_average.py - function that returns the weighted average of all integers tuple (<score>, <weight>)
+2. File: 101-square_matrix_map.py -  function that computes the square value of all integers of a matrix using map.
+3. File: 102-complex_delete.py - function that deletes keys with a specific value in a dictionary. 
+4. File: 103-python.c - two C functions that print some basic info about Python lists and Python bytes objects.
