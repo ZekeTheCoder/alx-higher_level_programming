@@ -18,10 +18,11 @@ def matrix_divided(matrix, div):
         TypeError: If div is not an int or float.
         ZeroDivisionError: If div is 0.
     """
-    if (not isinstance(matrix, list) or matrix == [] or
-            not all(isinstance(row, list) for row in matrix) or
-            not all((isinstance(element, int) or isinstance(element, float))
-                    for element in [num for row in matrix for num in row])):
+    if (not isinstance(matrix, list) or not matrix or
+        any(not row for row in matrix) or
+        not all(isinstance(row, list) for row in matrix) or
+        not all((isinstance(element, int) or isinstance(element, float))
+                for element in [num for row in matrix for num in row])):
         raise TypeError("matrix must be a matrix (list of lists) of "
                         "integers/floats")
 
@@ -33,5 +34,8 @@ def matrix_divided(matrix, div):
 
     if div == 0:
         raise ZeroDivisionError("division by zero")
+
+    if matrix == []:
+        raise ValueError("Cannot divide an empty matrix")
 
     return ([list(map(lambda x: round(x / div, 2), row)) for row in matrix])
