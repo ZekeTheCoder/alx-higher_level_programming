@@ -80,3 +80,50 @@ Passing div as a list:
     Traceback (most recent call last):
     	      ...
     TypeError: div must be a number
+
+Main test 
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> print(matrix_divided(matrix, 3))
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Check whether the original matrix remains unchanged after the function call
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>> result = matrix_divided(matrix, 3)
+    >>> assert matrix == [[1, 2, 3], [4, 5, 6]]
+    >>> print(result)
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Test with one argument (no div)
+
+     >>> matrix_divided([[1, 2, 3], [4, 5, 6]])
+     Traceback (most recent call last):
+     ...
+     TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Test with extra arguments:
+
+     >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3 , 10)
+     Traceback (most recent call last):
+     ...
+     TypeError: matrix_divided() takes 2 positional arguments but 3 were given
+
+Test with None as matrix:
+     >>> print(matrix_divided(None, 2))
+     Traceback (most recent call last):
+     ...
+     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test empty  inner lists matrix:
+     >>> print(matrix_divided([[], [], []], 2))
+     Traceback (most recent call last):
+     ...
+     TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test an empty list as element:
+
+    >>> matrix_divided([[1, 2], [], [3.0, -3]], 8)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
