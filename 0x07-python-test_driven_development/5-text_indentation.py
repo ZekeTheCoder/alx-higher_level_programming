@@ -21,9 +21,8 @@ def text_indentation(text):
         list_text = txt.split(char)
         txt = ""
 
-        for element in list_text:
-            element = element.strip(" ")
-            txt = element + char if txt is "" else txt + "\n\n" + element + char
+        for elem in list_text:
+            elem = elem.strip(" ")
+            txt = elem + char if txt is "" else txt + "\n\n" + elem + char
 
     print(txt[:-3], end="")
-    
