@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Write a class Rectangle that defines a rectangle by: (based on 4-rectangle.py)
-- Print the message Bye rectangle...(... being 3 dots not ellipsis) 
+- Print the message Bye rectangle...(... being 3 dots not ellipsis)
 when an instance of Rectangle is deleted.
 """
 
@@ -108,4 +108,4 @@ class Rectangle:
     def __del__(self):
         """Destructor method - defines instance method to delete rectangle"""
 
-        print("Bye rectangle...") 
+        print("Bye rectangle...")
