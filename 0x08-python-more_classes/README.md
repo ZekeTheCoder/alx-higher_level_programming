@@ -11,3 +11,6 @@
 8. File: 7-rectangle.py - Write a class Rectangle that defines a rectangle(based on 6-rectangle.py)
 9. File: 8-rectangle.py - Write a class Rectangle that defines a rectangle(based on 7-rectangle.py)
 10. File: 9-rectangle.py - Write a class Rectangle that defines a rectangle(based on 8-rectangle.py)
+
+### Advanced (10)
+1. File: 101-nqueens.py - The N queens puzzle is the challenge of placing N non-attacking queens on an N×N chessboard. Write a program that solves the N queens problem.
