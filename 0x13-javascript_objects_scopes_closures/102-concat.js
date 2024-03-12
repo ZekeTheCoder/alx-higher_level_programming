@@ -8,6 +8,11 @@
 const fs = require('fs');
 const fileA = fs.readFileSync(process.argv[2].toString(), 'utf8');
 const fileB = fs.readFileSync(process.argv[3].toString(), 'utf8');
-const concat = fileA + '\n' + fileB + '\n';
+const concat = fileA + fileB;
 
-fs.writeFileSync(process.argv[4].toString(), concat);
+fs.writeFileSync(process.argv[4].toString(), concat, function (err) {
+  if (err) {
+    return console.log(err);
+  }
+}
+);
