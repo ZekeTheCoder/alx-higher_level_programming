@@ -1,16 +1,14 @@
 #!/usr/bin/node
 const request = require('request');
 const movieId = process.argv[2];
-const filmUrl = `https://swapi-api.hbtn.io/api/films/${movieId}/`;
+const filmUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}/`;
 
 let characterUrls = [];
 
-/**
- * Fetch and print character names from the given index.
- */
+// Fetch and print character names from the given index.
 function fetchCharacter(index) {
   if (index >= characterUrls.length) {
-    return; // If the index is out of bounds, stop the recursion
+    return;
   }
 
   request(characterUrls[index], (error, response, body) => {
@@ -22,7 +20,7 @@ function fetchCharacter(index) {
     const characterContent = JSON.parse(body);
     console.log(characterContent.name);
 
-    fetchCharacter(index + 1); // Process next character
+    fetchCharacter(index + 1);
   });
 }
 
@@ -34,5 +32,5 @@ request.get(filmUrl, (error, response, body) => {
 
   const filmData = JSON.parse(body);
   characterUrls = filmData.characters;
-  fetchCharacter(0); // Start from index 0
+  fetchCharacter(0);
 });
