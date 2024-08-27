@@ -4,12 +4,6 @@ const request = require('request');
 const url = process.argv[2];
 const filePath = process.argv[3];
 
-
-if (!url || !filePath) {
-  console.error('Usage: ./5-request_store.js <URL> <file_path>');
-  process.exit(1);
-}
-
 request.get(url, (error, response, body) => {
   if (error) {
     console.log(error);
