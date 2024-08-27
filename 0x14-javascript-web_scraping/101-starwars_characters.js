@@ -16,7 +16,7 @@ request(filmUrl, (error, response, body) => {
 
   function fetchCharacter(index) {
     if (index >= characterUrls.length) {
-      return; // Base case - If the index is out of bounds, stop the recursion
+      return; // If the index is out of bounds, stop the recursion
     }
 
     request(characterUrls[index], (error, response, body) => {
